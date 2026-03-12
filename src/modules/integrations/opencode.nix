@@ -270,7 +270,7 @@ let
           command = server.command;
           enabled = server.enabled;
         }
-        // lib.optionalAttrs (server.environment != { }) { env = server.environment; })
+        // lib.optionalAttrs (server.environment != { }) { environment = server.environment; })
     else if server.type == "remote" then
       if server.url == null then
         throw "OpenCode MCP server of type 'remote' requires a url"
